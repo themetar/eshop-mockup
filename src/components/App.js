@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import Home from './Home';
+import Store from './Store';
 
 export default function App() {
   return (
@@ -13,7 +15,14 @@ export default function App() {
         </div>
       </div>
       <div className="max-w-screen-2xl mx-auto px-4">
-        <h1>My React App!</h1>
+        <Switch>
+          <Route path="/store">
+            <Store />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
