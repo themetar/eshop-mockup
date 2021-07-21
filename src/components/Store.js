@@ -1,6 +1,6 @@
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
-function Store({products}) {
+function Store({products, addToCart}) {
   const { path } = useRouteMatch();
   return (
     <Switch>
@@ -19,7 +19,10 @@ function Store({products}) {
                 <h2 className="text-xl">{p.name}</h2>
                 <div className="flex items-center">
                   <span className="mr-auto text-lg">${p.price}</span>
-                  <button className="border-2 border-red-500 rounded text-red-700 px-4 py-2">Add to cart</button>
+                  <button className="border-2 border-red-500 rounded text-red-700 px-4 py-2"
+                          onClick={() => addToCart(i)}>
+                    Add to cart
+                  </button>
                 </div>
               </div>
             )) }
