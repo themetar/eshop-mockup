@@ -40,7 +40,7 @@ export default function App() {
       <div className="max-w-screen-2xl mx-auto px-4">
         <Switch>
           <Route path="/store">
-            <Store products={products} addToCart={addToCart}/>
+            <Store products={products} cart={cart} addToCart={addToCart}/>
           </Route>
           <Route path="/">
             <Home />

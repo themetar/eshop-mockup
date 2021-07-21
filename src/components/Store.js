@@ -1,13 +1,12 @@
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import Cart from './Cart';
 
-function Store({products, addToCart}) {
+function Store({products, cart, addToCart}) {
   const { path } = useRouteMatch();
   return (
     <Switch>
       <Route path={`${path}/cart`}>
-        <div>
-          <h1>Cart</h1>
-        </div>
+        <Cart items={cart} products={products}/>
       </Route>
       <Route path={`${path}`}>
         <div>
