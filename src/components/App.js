@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Store from './Store';
 
+import products from '../data';
+
 export default function App() {
   return (
     <Router>
@@ -17,7 +19,7 @@ export default function App() {
       <div className="max-w-screen-2xl mx-auto px-4">
         <Switch>
           <Route path="/store">
-            <Store />
+            <Store products={products}/>
           </Route>
           <Route path="/">
             <Home />
