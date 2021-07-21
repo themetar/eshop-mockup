@@ -26,6 +26,19 @@ export default function App() {
      });
   };
 
+  const setCartQuantity = (index, quantity) => {
+    setCart(prevCart => {
+      if (quantity === 0) {
+        return prevCart.filter((_, i) => i !== index);
+      } else {
+        const cartItem = prevCart[index];
+        const cart = prevCart.slice();
+        cart[index] = {...cartItem, quantity: quantity};
+        return cart;
+      }
+    });
+  };
+
   return (
     <Router>
       <div>
@@ -40,7 +53,7 @@ export default function App() {
       <div className="max-w-screen-2xl mx-auto px-4">
         <Switch>
           <Route path="/store">
-            <Store products={products} cart={cart} addToCart={addToCart}/>
+            <Store products={products} cart={cart} addToCart={addToCart} setCartQuantity={setCartQuantity}/>
           </Route>
           <Route path="/">
             <Home />
