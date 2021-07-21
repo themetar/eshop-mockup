@@ -49,5 +49,8 @@ module.exports = (_, {mode}) => ({
       '...',
       new CssMinimizerPlugin()
     ]
+  },
+  devServer: {
+    historyApiFallback: true
   }
 });
