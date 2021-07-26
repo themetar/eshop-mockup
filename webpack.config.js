@@ -25,6 +25,14 @@ module.exports = (_, {mode}) => ({
         use: [
           mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader', 'postcss-loader']
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       }
     ]
   },
