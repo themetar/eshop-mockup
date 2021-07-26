@@ -50,7 +50,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-2xl mx-auto px-4">
+      <div className="max-w-screen-2xl mx-auto px-4 mb-4">
         <Switch>
           <Route path="/store">
             <Store products={products} cart={cart} addToCart={addToCart} setCartQuantity={setCartQuantity}/>
@@ -60,6 +60,20 @@ export default function App() {
           </Route>
         </Switch>
       </div>
+      <footer className="max-w-screen-2xl mx-auto px-2 pb-1">
+        <div className="bg-black text-white px-2 py-2 rounded grid grid-cols-3">
+          <div className="px-4 border-r-2 border-gray-600">Brought to you by <a href="https://github.com/themetar">themetar</a>, <a href="https://reactjs.org/">React</a>, and <a href="https://reactrouter.com/">React Router</a>.</div>
+          <div className="px-4 border-r-2 border-gray-600">Contact us at <a>e-shop@example.org</a>.</div>
+          <div className="px-4">
+            <nav>
+              <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/store">Store</Link></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
     </Router>
   );
 }
