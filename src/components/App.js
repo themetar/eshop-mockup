@@ -47,7 +47,7 @@ export default function App() {
           <Link to="/store" className="mr-2 px-4 py-2">Store</Link>
           <Link to="/store/cart" className="bg-yellow-500 rounded text-gray-100 px-4 py-2">Cart {cartSize > 0 && `(${cartSize})`}</Link>
         </div>
-        <div className="px-4 mb-4 flex-grow">
+        <div className="px-4 mb-4 flex-grow flex">
           <Switch>
             <Route path="/store">
               <Store products={products} cart={cart} addToCart={addToCart} setCartQuantity={setCartQuantity}/>
