@@ -31,7 +31,7 @@ function Cart({items, products, setCartQuantity}) {
           { items.map((item, index) => (
               <tr key={item.productId} className="odd:bg-gray-100">
                 <td className="pl-1">#{index + 1}</td>
-                <td className="flex items-center">
+                <td className="flex flex-col md:flex-row items-center">
                   <img alt={products[item.productId].name} src="/images/kelli-mcclintock-GopRYASfsOc-unsplash.jpg"
                         className="w-20 mr-1"/>
                   <span className="flex-grow">{products[item.productId].name}</span>

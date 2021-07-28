@@ -11,7 +11,7 @@ function Store({products, cart, addToCart, setCartQuantity}) {
       <Route path={`${path}`}>
         <div>
           <h1 className="text-2xl text-center mb-2">Our products</h1>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             { products.map((p, i) => (
               <div key={i}>
                 <img alt={p.name} src="/images/kelli-mcclintock-GopRYASfsOc-unsplash.jpg"></img>

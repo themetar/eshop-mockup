@@ -60,13 +60,13 @@ export default function App() {
           </Switch>
         </div>
         <footer>
-          <div className="bg-gray-900 text-white px-2 py-2 rounded grid grid-cols-3">
-            <div className="px-4 border-r-2 border-gray-600">
+          <div className="bg-gray-900 text-white px-2 py-2 rounded md:grid grid-cols-3">
+            <div className="px-4 py-1 md:border-r-2 border-gray-600">
               Brought to you by <a href="https://github.com/themetar" className="hover-link">themetar</a>, <a href="https://reactjs.org/" className="hover-link">React</a>, and <a href="https://reactrouter.com/" className="hover-link">React Router</a>.
             </div>
-            <div className="px-4 border-r-2 border-gray-600">Contact us at <a href="" className="hover-link">e-shop@example.org</a>.</div>
-            <div className="px-4">
-              <nav>
+            <div className="px-4 py-1 md:border-r-2 border-gray-600">Contact us at <a href="" className="hover-link">e-shop@example.org</a>.</div>
+            <div className="px-4 py-1">
+              <nav className="border-gray-600 border-t-2 md:border-t-0">
                 <ul>
                   <li><Link to="/">Home</Link></li>
                   <li><Link to="/store">Store</Link></li>
