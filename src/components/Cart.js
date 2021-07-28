@@ -17,7 +17,7 @@ function Cart({items, products, setCartQuantity}) {
       )}
 
       {items.length > 0 && (
-      <table className="w-full">
+      <table className="w-full mb-2">
         <thead>
           <tr>
             <th>#</th>
@@ -49,6 +49,12 @@ function Cart({items, products, setCartQuantity}) {
           </tr>
         </tbody>
       </table>
+      )}
+
+      {items.length > 0 && (
+        <div className="text-right px-4">
+          <button className="px-4 py-2 bg-gray-200 border-gray-300 border-2 rounded text-gray-500" disabled="true" title="Not implemented">Checkout</button>
+        </div>
       )}
     </div>
   );
