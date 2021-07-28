@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import basename from '../basename';
+
 function Cart({items, products, setCartQuantity}) {
   const quantityHandler = index => (
     event => {
@@ -32,7 +34,7 @@ function Cart({items, products, setCartQuantity}) {
               <tr key={item.productId} className="odd:bg-gray-100">
                 <td className="pl-1">#{index + 1}</td>
                 <td className="flex flex-col md:flex-row items-center">
-                  <img alt={products[item.productId].name} src="/images/kelli-mcclintock-GopRYASfsOc-unsplash.jpg"
+                  <img alt={products[item.productId].name} src={`${basename || ""}/images/kelli-mcclintock-GopRYASfsOc-unsplash.jpg`}
                         className="w-20 mr-1"/>
                   <span className="flex-grow">{products[item.productId].name}</span>
                   <span>${products[item.productId].price}</span>

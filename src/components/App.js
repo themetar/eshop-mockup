@@ -5,6 +5,8 @@ import Store from './Store';
 
 import products from '../data';
 
+import basename from '../basename';
+
 export default function App() {
   const [cart, setCart] = useState([]);
 
@@ -41,7 +43,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen max-w-screen-2xl mx-auto px-2 pb-1 flex flex-col text-gray-900">
-      <Router>
+      <Router basename={basename}>
         <div className="bg-white pt-1 sticky top-0 mb-2">
           <nav className="bg-yellow-200 p-2 rounded flex">
             <Link to="/" className="mr-auto px-4 py-2">Home</Link>

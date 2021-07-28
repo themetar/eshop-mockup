@@ -1,6 +1,8 @@
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import Cart from './Cart';
 
+import basename from '../basename';
+
 function Store({products, cart, addToCart, setCartQuantity}) {
   const { path } = useRouteMatch();
   return (
@@ -14,7 +16,7 @@ function Store({products, cart, addToCart, setCartQuantity}) {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             { products.map((p, i) => (
               <div key={i}>
-                <img alt={p.name} src="/images/kelli-mcclintock-GopRYASfsOc-unsplash.jpg"></img>
+                <img alt={p.name} src={`${basename || ""}/images/kelli-mcclintock-GopRYASfsOc-unsplash.jpg`}></img>
                 <h2 className="text-xl">{p.name}</h2>
                 <div className="flex items-center">
                   <span className="mr-auto text-lg bg-gray-700 text-gray-100 px-1 rounded">${p.price}</span>
