@@ -9,7 +9,7 @@ function Cart({items, products, setCartQuantity}) {
   );
 
   return (
-    <div>
+    <div className="w-full">
       <h1 className="text-2xl pt-4 mb-4">Your Cart</h1>
 
       {items.length === 0 && (

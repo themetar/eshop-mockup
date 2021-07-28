@@ -40,14 +40,14 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen max-w-screen-2xl mx-auto px-2 py-1 flex flex-col">
+    <div className="min-h-screen max-w-screen-2xl mx-auto px-2 py-1 flex flex-col text-gray-900">
       <Router>
         <div className="bg-yellow-200 p-2 mb-2 rounded flex">
           <Link to="/" className="mr-auto px-4 py-2">Home</Link>
-          <Link to="/store" className="mr-2 px-4 py-2">Store</Link>
-          <Link to="/store/cart" className="bg-yellow-500 rounded text-gray-100 px-4 py-2">Cart {cartSize > 0 && `(${cartSize})`}</Link>
+          <Link to="/store" className="mr-2 px-4 py-2 text-red-500 hover:text-red-600">Store</Link>
+          <Link to="/store/cart" className="bg-orange-600 hover:bg-orange-500 rounded text-gray-100 px-4 py-2">Cart {cartSize > 0 && `(${cartSize})`}</Link>
         </div>
-        <div className="px-4 mb-4 flex-grow flex">
+        <div className="px-4 mb-2 flex-grow flex">
           <Switch>
             <Route path="/store">
               <Store products={products} cart={cart} addToCart={addToCart} setCartQuantity={setCartQuantity}/>
@@ -58,9 +58,11 @@ export default function App() {
           </Switch>
         </div>
         <footer>
-          <div className="bg-black text-white px-2 py-2 rounded grid grid-cols-3">
-            <div className="px-4 border-r-2 border-gray-600">Brought to you by <a href="https://github.com/themetar">themetar</a>, <a href="https://reactjs.org/">React</a>, and <a href="https://reactrouter.com/">React Router</a>.</div>
-            <div className="px-4 border-r-2 border-gray-600">Contact us at <a>e-shop@example.org</a>.</div>
+          <div className="bg-gray-900 text-white px-2 py-2 rounded grid grid-cols-3">
+            <div className="px-4 border-r-2 border-gray-600">
+              Brought to you by <a href="https://github.com/themetar" className="hover-link">themetar</a>, <a href="https://reactjs.org/" className="hover-link">React</a>, and <a href="https://reactrouter.com/" className="hover-link">React Router</a>.
+            </div>
+            <div className="px-4 border-r-2 border-gray-600">Contact us at <a href="" className="hover-link">e-shop@example.org</a>.</div>
             <div className="px-4">
               <nav>
                 <ul>

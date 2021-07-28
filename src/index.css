@@ -5,5 +5,10 @@
   .splash-image {
     background-image: linear-gradient(0, rgba(0,0,0,.6), rgba(0,0,0,0)),
                       url('./img/moralis-tsai-04cHkpfFnLQ-unsplash.jpg');
+    @apply bg-center;
+  }
+
+  .hover-link {
+    @apply text-yellow-200 hover:text-red-500;
   }
 }
