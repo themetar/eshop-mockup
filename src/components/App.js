@@ -40,12 +40,14 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen max-w-screen-2xl mx-auto px-2 py-1 flex flex-col text-gray-900">
+    <div className="min-h-screen max-w-screen-2xl mx-auto px-2 pb-1 flex flex-col text-gray-900">
       <Router>
-        <div className="bg-yellow-200 p-2 mb-2 rounded flex">
-          <Link to="/" className="mr-auto px-4 py-2">Home</Link>
-          <Link to="/store" className="mr-2 px-4 py-2 text-red-500 hover:text-red-600">Store</Link>
-          <Link to="/store/cart" className="bg-orange-600 hover:bg-orange-500 rounded text-gray-100 px-4 py-2">Cart {cartSize > 0 && `(${cartSize})`}</Link>
+        <div className="bg-white pt-1 sticky top-0 mb-2">
+          <div className="bg-yellow-200 p-2 rounded flex">
+            <Link to="/" className="mr-auto px-4 py-2">Home</Link>
+            <Link to="/store" className="mr-2 px-4 py-2 text-red-500 hover:text-red-600">Store</Link>
+            <Link to="/store/cart" className="bg-orange-600 hover:bg-orange-500 rounded text-gray-100 px-4 py-2">Cart {cartSize > 0 && `(${cartSize})`}</Link>
+          </div>
         </div>
         <div className="px-4 mb-2 flex-grow flex">
           <Switch>
