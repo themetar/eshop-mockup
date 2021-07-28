@@ -13,7 +13,7 @@ function Cart({items, products, setCartQuantity}) {
       <h1 className="text-2xl pt-4 mb-4">Your Cart</h1>
 
       {items.length === 0 && (
-        <p>Your cart is empty. <Link to="/store">Start shopping.</Link></p>
+        <p>Your cart is empty. <Link to="/store" className="text-red-500 italic hover:text-red-600">Start shopping.</Link></p>
       )}
 
       {items.length > 0 && (
