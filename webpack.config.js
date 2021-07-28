@@ -16,9 +16,25 @@ module.exports = (_, {mode}) => ({
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use : {
-          loader: 'babel-loader'
-        }
+        use : [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'webpack-preprocessor-loader',
+            options: {
+              debug: process.env.NODE_ENV !== 'product',
+              directives: {
+                secret: false,
+              },
+              params: {
+                ENV: process.env.NODE_ENV,
+                MODE: mode
+              },
+              verbose: false
+            }
+          }
+        ]
       },
       {
         test: /\.css$/,
